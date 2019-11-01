@@ -332,6 +332,31 @@ c /= 11;
 ## Example 13 - Declare String Variables
 
 ```js
+/*
+
+Previously we have used the code
+
+var myName = "your name";
+
+"your name" is called a string literal. It is a string because it is a series of zero or more characters enclosed in single or double quotes.*/
+
+
+// Example
+var firstName = "Alan";
+var lastName = "Turing";
+
+// Only change code below this line
+
+var myFirstName = "Yavuz"
+var myLastName = "Ugurtas"
+
+
+---
+
+/*In JavaScript, you can escape a quote from considering it as an end of
+string quote by placing a backslash (\) in front of the quote.*/
+
+eg: var myStr = "Edward Said said, \"My surname is strange\" and added \"Javascript is my passion\".";
 
 
 ```
