@@ -10,7 +10,7 @@ This is just a study place for me! Credit to freecodecamp.org
 /* This is en example for multi-line comment */
 ```
 
-## Exercise 2
+## Exercise 2 - Variables
 
 ```js 
 
@@ -30,6 +30,55 @@ Any of the seven data types may be stored in a variable. */
 
 var myName;
 
+```
+## Exercise 3 - Storing Values with the Assignment Operator
+
+```js
+
+
+var a = 7;
+var b = a;
+
+
+```
+## Exercise 4 - Initializing Variables with the Assignment Operator
+
+```js
+
+/* Eg : 
+
+It is common to initialize a variable to an initial value in the same line as it is declared.
+
+var myVar = 0;
+
+Creates a new variable called myVar and assigns it an initial value of 0.
+
+*/ 
+
+var a = 9;
+
+```
+
+## Exercise 5 - Understanding Uninitialized Variables
+
+```js
+
+/*NaN means Not a Number  
+
+When JavaScript variables are declared, they have an initial value of undefined. If you do a mathematical operation on an undefined variable your result will be NaN which means "Not a Number". If you concatenate a string with an undefined variable, you will get a literal string of "undefined".
+
+*/
+Assignment: a should be 6, b should be 15, c should be "I am a String"
+
+// Initialize these three variables
+var a = 5;
+var b = 10;
+var c = "I am a";
+
+// Do not change code below this line
+a = a + 1;
+b = b + 5;
+c = c + " String!";
 
 
 ```
