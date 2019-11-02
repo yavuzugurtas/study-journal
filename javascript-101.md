@@ -338,7 +338,9 @@ Previously we have used the code
 
 var myName = "your name";
 
-"your name" is called a string literal. It is a string because it is a series of zero or more characters enclosed in single or double quotes.*/
+"your name" is called a string literal. 
+It is a string because it is a series of zero or more characters enclosed 
+in single or double quotes.*/
 
 
 // Example
@@ -360,4 +362,253 @@ eg: var myStr = "Edward Said said, \"My surname is strange\" and added \"Javascr
 
 
 ```
+## Example 14 - Escape Sequences in Strings
 
+```js
+
+We learned this in the previous challenge.
+
+Code	Output
+\'	single quote
+\"	double quote
+\\	backslash
+\n	newline
+\r	carriage return
+\t	tab
+\b	word boundary
+\f	form feed
+
+Note that the backslash itself must be escaped in order to display as a backslash.
+eg: var myStr = "FirstLine\n\t\\SecondLine\nThirdLine";
+
+```
+## Example 15 - Concatenating Strings with Plus Operator
+
+```js
+/*it is called the concatenation operator. You can build a new
+string out of other strings by concatenating them together. */
+
+Examples
+
+'My name is Alan,' + ' I concatenate.' 
+
+eg: Build myStr from the strings "This is the start. " and "This is the end." using the + operator.
+
+var myStr = "This is the start." + " This is the end."
+
+var myStr= "This is the first sentence."  
+myStr += " This is the second sentence."
+
+var myName = "Yavuz";
+var myStr = "My name is" + myName + " and I am well"
+
+var someAdjective = "cool cool cool"
+var myStr = "Learning to code is ";
+myStr = myStr += someAdjective
+
+
+```
+
+## Example 16 -  Find the Length of a String
+
+```js
+/* 
+
+You can find the length of a String value by writing .length after the string variable or string literal.
+
+"Alan Peter".length; // 10
+
+For example, 
+if we created a variable var firstName = "Charles", 
+we could find out how long the string "Charles" is by using the firstName.length property.*/
+
+// Setup
+var lastNameLength = 0;
+var lastName = "Lovelace";
+
+// Only change code below this line.
+
+lastNameLength = lastName.length;
+
+
+```
+## Example 17 - Understand String Immutability
+
+```js
+/*In JavaScript, String values are immutable, which means that they cannot be altered once created.
+
+For example, the following code:
+
+var myStr = "Bob";
+myStr[0] = "J";
+
+cannot change the value of myStr to "Job", because the contents of myStr cannot be altered. Note that this does not mean that myStr cannot be changed, just that the individual characters of a string literal cannot be changed. The only way to change myStr would be to assign it with a new string, like this:
+
+var myStr = "Bob";
+myStr = "Job";
+*/
+
+```
+
+## Remember : "computers start counting at 0, so the first character is actually the zeroth character."
+
+
+## Example 18 - Use Bracket Notation to Find the Last Character in a String
+
+```js
+/*For example, if var firstName = "Charles", you can get the value of the last letter of the string by using firstName[firstName.length - 1].*/
+ // Setup
+var lastName = "Lovelace";
+
+// Only change code below this line.
+var lastLetterOfLastName = lastName[lastName.length-1];
+
+
+```
+
+## Example 19 - Word Blanks
+
+```js
+var myNoun = "dog";
+var myAdjective = "big";
+var myVerb = "ran";
+var myAdverb = "quickly";
+
+var wordBlanks = "My " + myAdjective + " " + myNoun +"," + myVerb + " away " + myAdverb + "."; // Only change this line;
+
+```
+
+## Example 20 - Store Multiple Values in one Variable using JavaScript Arrays
+
+```js
+
+/* 
+
+With JavaScript array variables, we can store several pieces of data in one place.
+
+You start an array declaration with an opening square bracket, 
+end it with a closing square bracket, and put a comma between each entry, like this:
+
+var sandwich = ["peanut butter", "jelly", "bread"].*/ 
+
+eg: 
+
+Modify the new array myArray so that
+it contains both a string and a number (in that order).
+var myArray = ["Yavuz", 7];
+
+
+```
+
+## Example 21 -  Access Array Data with Indexes
+
+```js
+
+Example
+
+/*var array = [50,60,70];
+array[0]; // equals 50
+var data = array[1];  // equals 60*/
+
+eg: Create a variable called myData and set it 
+to equal the first value of myArray using bracket notation.
+
+var myArray = [50,60,70];
+var myData = myArray[0];
+---
+
+eg;
+Using bracket notation select an element from myArray such that myData is equal to 8.
+// Setup
+var myArray = [[1,2,3], [4,5,6], [7,8,9], [[10,11,12], 13, 14]];
+
+// Only change code below this line.
+var myData = myArray[2][1];
+
+
+
+
+```
+## Example 22 - Manipulate Arrays With push() ,pop(), shift()
+
+```js
+/*An easy way to append data to the end of an array is via the push() function.
+
+.push() takes one or more parameters and "pushes" them onto the end of the array.
+
+var arr = [1,2,3];
+arr.push(4);
+// arr is now [1,2,3,4]*/
+
+eg: Push ["dog", 3] onto the end of the myArray variable.
+// Setup
+var myArray = [["John", 23], ["cat", 2]];
+
+// Only change code below this line.
+myArray.push(["dog",3])
+
+---
+ .pop() removes the last element from an array and returns that element.
+ // Setup
+var myArray = [["John", 23], ["cat", 2]];
+
+// Only change code below this line.
+var removedFromMyArray = myArray.pop();
+
+---
+
+ .shift() comes in. It works just like .pop(),
+ except it removes the first element instead of the last.
+eg:Use the .shift() function to remove the first item from myArray, 
+assigning the "shifted off" value to removedFromMyArray.
+
+// Setup
+var myArray = [["John", 23], ["dog", 3]];
+
+// Only change code below this line.
+var removedFromMyArray = myArray.shift();
+
+```
+
+## Example 23 - Shopping List
+
+```js
+Create a shopping list in the variable myList. 
+The list should be a multi-dimensional array containing several sub-arrays.
+i.e.
+
+["Chocolate Bar", 15]
+eg: var myList = [["Gala",1905],["yellow",10],["red",7],["Cimbom",1905],["Gs",2019]];
+```
+
+## Example 24 - Write Reusable JavaScript with Functions
+
+```js
+/*
+
+In JavaScript, we can divide up our code into reusable parts called functions.
+
+Here's an example of a function:
+
+function functionName() {
+  console.log("Hello World");
+}
+*/
+
+eg:    Create a function called reusableFunction 
+which prints "Hi World" to the dev console.
+    Call the function.
+    
+function reusableFunction() {
+     console.log("Hi World")
+}
+  reusableFunction();
+
+
+```
+
+## Example 25 - Passing Values to Functions with Arguments
+
+```js
+
+```
