@@ -442,7 +442,10 @@ For example, the following code:
 var myStr = "Bob";
 myStr[0] = "J";
 
-cannot change the value of myStr to "Job", because the contents of myStr cannot be altered. Note that this does not mean that myStr cannot be changed, just that the individual characters of a string literal cannot be changed. The only way to change myStr would be to assign it with a new string, like this:
+cannot change the value of myStr to "Job",
+because the contents of myStr cannot be altered. Note that this does not mean that myStr cannot be changed,
+just that the individual characters of a string literal cannot be changed. 
+The only way to change myStr would be to assign it with a new string, like this:
 
 var myStr = "Bob";
 myStr = "Job";
@@ -610,5 +613,83 @@ function reusableFunction() {
 ## Example 25 - Passing Values to Functions with Arguments
 
 ```js
+/* Here is a function with two parameters, param1 and param2:
+function testFun(param1, param2) {
+  console.log(param1, param2);
+  
+  Then we can call testFun: testFun("Hello", "World"); 
+  We have passed two arguments, "Hello" and "World".
+  Inside the function, param1 will equal "Hello" and param2 will equal "World". 
+  Note that you could call testFun again with different arguments and the
+  parameters would take on the value of the new arguments.
+*/
+
+function functionWithArgs(a,b)  {
+  console.log(a + b);
+}
+
+functionWithArgs(1,2);
+functionWithArgs(7,9);
+```
+## Example 26 - Global Scope and Functions
+
+```js
+
+/*Variables which are used without the var keyword are automatically 
+created in the global scope. This can create unintended consequences elsewhere in your code 
+or when running a function again. You should always declare your variables with var. */
+// Declare your variable here
+
+var myGlobal = 10;
+
+function fun1() {
+  // Assign 5 to oopsGlobal Here
+oopsGlobal = 5;
+}
+
+// Only change code above this line
+function fun2() {
+  var output = "";
+  if (typeof myGlobal != "undefined") {
+    output += "myGlobal: " + myGlobal;
+  }
+  if (typeof oopsGlobal != "undefined") {
+    output += " oopsGlobal: " + oopsGlobal;
+  }
+  console.log(output);
+}
+running tests
+// tests completed
+// console output
+
+"myGlobal: 10 oopsGlobal: 5"
+
+---
+// Setup
+var outerWear = "T-Shirt";
+
+function myOutfit() {
+  // Only change code below this line
+var outerWear = "sweater";
+
+
+  // Only change code above this line
+  return outerWear;
+}
+
+myOutfit();
+
+
+
+----
+
+
+function timesFive(num)  {
+   return num * 5;
+}
+
+console.log(timesFive(5));
+
 
 ```
+
