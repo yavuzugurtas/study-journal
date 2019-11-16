@@ -692,4 +692,11 @@ console.log(timesFive(5));
 
 
 ```
+## Example 27 - Stand in Line
 
+```js
+
+
+
+
+```
