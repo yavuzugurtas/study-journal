@@ -692,11 +692,53 @@ console.log(timesFive(5));
 
 
 ```
-## Example 27 - Stand in Line
+
+## LAst example from class js3 
+
 
 ```js
 
 
+
+  class clock {
+    constructor(template) {
+        this.template = 'template';
+        this.timer = 0;
+
+    render: function() {
+      let date = new Date();
+
+      let hours = date.getHours();
+      if (hours < 10) hours = '0' + hours;
+
+      let mins = date.getMinutes();
+      if (mins < 10) mins = '0' + mins;
+
+      let secs = date.getSeconds();
+      if (secs < 10) secs = '0' + secs;
+
+      let output = this.template
+        .replace('h', hours)
+        .replace('m', mins)
+        .replace('s', secs);
+
+      console.log(output);
+    },
+
+    stop: function() {
+      clearInterval(this.timer);
+    },
+
+    start: function() {
+      this.render();
+      timer = setInterval(this.render.bind(this), 1000);
+    },
+
+  }
+     
+     const newClock = new clock('h');
+     const secondClock = new clock('h:m');
+     
 
 
 ```
